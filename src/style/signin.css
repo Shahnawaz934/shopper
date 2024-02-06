@@ -1,0 +1,24 @@
+#signUp{
+    margin-left: 00px;
+    background-color: rgb(217, 224, 231);
+    margin-top: -24px;
+    width: 300px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    
+}
+#signUp>div{
+    margin-left: 200px;
+}
+/* form{
+    width: 300px;
+    
+} */
+
+@media screen and (min-width: 50px){
+form{
+    width: 300px;
+
+}
+
+}

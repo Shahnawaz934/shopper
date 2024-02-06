@@ -1,0 +1,138 @@
+
+nav{
+    background-color: black;
+    box-shadow: 2px 2px 4px rgb(142, 137, 137);
+}
+.navbar-nav{
+    margin-top: 25px;
+}
+.navbar-nav li>a{
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+#signinContainer{
+    padding-left: -50px;
+    /* overflow: auto;
+    text-overflow:; */
+    
+}
+#signinContainer li{
+    margin-left: -5px;
+    padding-left: 0px;
+    
+    
+}
+#signinContainer li>a{
+    color: black;
+}
+.navbar-nav li{
+    margin-left: 15px;
+    margin-bottom: 30px;
+}
+.navbar-nav li>a:hover{
+    border-bottom: 2px solid cadetblue;
+}
+
+section{
+    margin-top: 50px;
+}
+
+#btnSignin{
+    margin-top: -30px;
+    color: white;
+    border-radius: 20px;
+}
+#btnCart{
+    margin-top: -30px;
+}
+#btnSignin:hover{
+    border-bottom: 4px  solid cadetblue;
+    border-top: 4px solid cadetblue;
+    color: white;
+}
+
+.navbar-brand{
+    font-weight: bold;
+    font-size: 30px;
+    margin-right: 250px;
+    color: white;
+}
+.navbar-toggler{
+    background-color: black;
+}
+
+
+#categoryContainer{
+    display: flex;
+    
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: auto;
+    gap: 15px;
+    
+}
+#categoryContainer > div{
+    /* box-shadow: rgb(0, 0, 0.1) 0px 0px 1px ; */
+    width: 250px;
+    text-align: center;
+
+}
+#title{
+    height: 50px;
+    width: 220px;
+    overflow: auto;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+img{
+    
+    height: 250px;
+    /* cursor: grab; */
+}
+img:hover{
+    border: 1px solid rgb(221, 218, 218);
+    cursor: pointer;
+    border-radius: 10px;
+    /* height: 250px;
+    cursor: grab; */
+}
+#addToCartBtn{
+    background-color: rgb(0, 0, 0, 0.3);
+    width: 140px;
+    height: 50px;
+    border: 1px solid rgb(232, 218, 218) ;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 80px;
+}
+#addToCartBtn:hover{
+    background-color: white;
+}
+#cartImg{
+    height: 150px;
+}
+
+#categoryFilter{
+    margin-top: 80px;
+}
+
+
+footer{
+    padding-top: 100px;
+    margin-top: 100px;
+    background-color: rgb(35, 32, 32);
+    /* height: 400px; */
+}
+
+#footer-title span{
+    color: rgb(192, 175, 175);
+    margin-bottom: 15px;
+}
+footer hr{
+    color: #827d7d;
+    size: 5px;
+    margin-top: 5px;
+    
+}

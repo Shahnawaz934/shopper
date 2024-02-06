@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" >
+    <!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"> -->
+    <link rel="stylesheet" href="../src/style/categories.css"/>
+    <title>Document</title>
+
+</head>
+<body class="container-fluid" onload="bodyload()" >
+
+  <header>
+    <nav class="navbar navbar-dark navbar-expand-lg">
+        <div class="container-fluid">
+            <!-- <h2 class="navbar-brand">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2> -->
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#Nav">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <h1 class="navbar-brand">Shopper</h1>
+            <div  class="navbar-collapse collapse" id="Nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="index.html"><span class="bi bi-house-door-fill">Home</span></a></li>
+                    <li class="nav-item"><a href="#" ><span id="mensWear" >Men's Wear</span></a></li>
+                    <li class="nav-item"><a href="#" ><span id="womensWear">Women's Wear</span></a></li>
+                    <li class="nav-item"><a href="#"><span id="kidsWear">Kid's Wear</span></a></li>
+                    <li class="nav-item"><a href="#"><span class="bi bi-phone-fill"></span>Electronics</a></li>
+                </ul>
+                <div class="ms-4">
+                </div>
+            </div>
+            <div class="navbar-collapse collapse" id="Nav">
+                <div class="navbar-nav w-25 mb-2 ms-4" >
+                    <button id="btnCart" class="btn btn-warning text-dark position-relative" data-bs-toggle="modal" data-bs-target="#Cart" onclick="LoadCartClick()">
+                        <span class="bi bi-cart3"></span>
+                        <span class="badge rounded rounded-4 position-absolute bg-danger" id="cartCount"></span>
+                    </button>
+                </div>
+            </div>
+            <div id="userSignout" class="d-none">
+                <div class=" navbar-collapse collapse" id="Nav">
+                    <div class="ms-4">
+                        <button class="btn btn-danger">SignOut</button>
+                    </div>
+                </div>
+            </div>
+            <div id="userSignin">
+                <div class=" navbar-collapse collapse" id="Nav">
+                    <div class="dropdown navbar-nav">
+                        <button class="btn dropdown-toggle" id="btnSignin" href="#" data-bs-toggle="dropdown">
+                            <span class="bi bi-box-arrow-in-right"></span>
+                               Signin
+                        </button>
+                        <ul class="dropdown-menu" id="signinContainer">
+                           <li class="dropdown-item"><a href="signin.html"><span class="bi bi-box-arrow-in-right "></span>Sign In</a></li>
+                           <li class="dropdown-item"><a href="signup.html"><span class="bi bi-person-fill-add"></span>Sign Up</a></li>
+                           <!-- <li class="dropdown-item"><a href="#"><span class="bi bi-unlock-fill"></span>Change Password</a></li> -->
+                       </ul>
+                    </div> 
+                </div>
+            </div>
+        </div>    
+    </nav>
+
+    <div class="modal fade table-hover" id="Cart">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="text-primary">Your Cart Summary</h2>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-borderless" >
+                        <thead>
+                            <tr >
+                                <th class="w-25">Title</th>
+                                <th>Price</th>
+                                <th>Preview</th>
+                                <th>Remove Item</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                        <tfoot>
+                            <tr id="trfoot">
+                                <td><h4>Total</h4></td>
+                                <td id="tdtotal"></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+  </header>  
+
+
+
+    <section>
+        <div class="row">
+            <div class="col-2">
+                <label class="fw-bold">Select Category</label>
+                <div>
+                    <select onchange="handleCategoryChange()" class="form-select" id="lstCategories">
+
+                    </select>
+                </div>
+                <div id="categoryFilter">
+                    <label class="fw-bold">Filter Category</label>
+                    <ul class="list-unstyled m-2">
+                        <li><input type="checkbox" name="categories" value="mens" >Mens</li>
+                        <li><input type="checkbox" name="categories" value="womens">Womens</li>
+                        <li><input type="checkbox" name="categories" value="kids">Kids</li>
+                        <li><input type="checkbox" name="categories" value="electronics">Electronics</li>
+                    </ul>
+                    <button id="btnFilter" class="btn btn-outline-secondary" onclick="handleFilterByCategoryClick()">Apply Filter</button>
+                </div>
+                <div id="priceFilter" class="mt-4">
+                    <label class="fw-bold mb-2 ">Filter Price</label>
+                    <select id="sortPrice" class="form-select" onchange="handlePriceChange()">
+                        <option>Sort By Price</option>
+                        <option value="high">High to Low</option>
+                        <option value="low">Low To High</option>
+                    </select>
+                    <!-- <ul class="list-unstyled m-2">
+                        <li><input type="checkbox" name="categories" value="mens" >Mens</li>
+                        <li><input type="checkbox" name="categories" value="womens">Womens</li>
+                        <li><input type="checkbox" name="categories" value="kids">Kids</li>
+                        <li><input type="checkbox" name="categories" value="electronics">Electronics</li>
+                    </ul>
+                    <button id="btnFilter" class="btn btn-outline-secondary" onclick="handleFilterByCategoryClick()">Apply Filter</button> -->
+                </div>
+            </div>
+            <main class="col-10" id="categoryContainer">
+
+            </main>
+        </div>
+    </section>
+    
+
+    <footer>
+        <div id="footer-title" class="row text-white p-4">
+            <div class="col-3">
+                <h2>Shopper.</h2>
+                <span class="me-2 fs-3"><a href="https://www.facebook.com/" class="bi bi-facebook"></a></span>
+                <span class="fs-3 me-2 "><a href="https://www.youtube.com/" class="bi bi-youtube text-danger "></a></span>
+                <span class="fs-3 me-2"><a href="https://twitter.com/" class="bi bi-twitter text-info"></a></span>
+                <span class="fs-3 me-2"><a href="https://www.instagram.com/" class="bi bi-instagram" style="color: palevioletred;"></a></span>
+            </div>
+            <div class="col-9">
+                <div class="d-flex flex-wrap justify-content-around">
+                    <div class="d-grid">
+                        <h4>SUPPORT</h4>
+                        <span>Contact Us</span>
+                        <span>FAQs</span>
+                        <span>Size Guide</span>
+                        <span>Shipping & Returns</span>
+                    </div>
+                    <div class=" d-grid">
+                        <h4>SHOP</h4>
+                        <span>Men's Shopping</span>
+                        <span>Women's Shopping</span>
+                        <span>Kids' Shopping</span>
+                        <span>Discounts</span>
+                    </div>
+                    <div class=" d-grid">
+                        <h4>COMPANY</h4>
+                        <span>Our Story</span>
+                        <span>Careers</span>
+                        <span>Terms & Conditions</span>
+                        <span>Privacy & Cookie policy</span>
+                    </div>
+                    <div class=" d-grid">
+                        <h4>CONTACT</h4>
+                        <span>1-202-555-0105</span>
+                        <span>1-202-555-0106</span>
+                        <span>help@shopper.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script> -->
+</body>
+</html>
+
+<script src="../src/js/categories.js">
+     
+</script>

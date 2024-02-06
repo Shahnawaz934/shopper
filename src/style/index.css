@@ -1,0 +1,303 @@
+nav{
+    background-color: black;
+    box-shadow: 2px 2px 4px rgb(142, 137, 137);
+}
+.navbar-nav{
+    margin-top: 25px;
+}
+.navbar-nav li>a{
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+#signinContainer{
+    padding-left: -50px;
+    /* overflow: auto;
+    text-overflow:; */
+    
+}
+#signinContainer li{
+    margin-left: -5px;
+    padding-left: 0px;
+    
+    
+}
+#signinContainer li>a{
+    color: black;
+}
+.navbar-nav li{
+    margin-left: 15px;
+    margin-bottom: 30px;
+}
+.navbar-nav li>a:hover{
+    border-bottom: 2px solid cadetblue;
+}
+.navbar-nav>button{
+    margin-top: -30px;
+    color: white;
+    border-radius: 20px;
+    
+    
+   
+}
+.navbar-nav>button:hover{
+    border-bottom: 4px  solid cadetblue;
+    border-top: 4px solid cadetblue;
+    color: white;
+}
+.navbar-brand{
+    font-weight: bold;
+    font-size: 30px;
+    margin-right: 250px;
+    color: white;
+}
+.navbar-toggler{
+    background-color: black;
+}
+
+/* .eligiblity img:hover{
+    width: 600px;
+    height: 400px;
+}
+ul{
+    list-style: none;
+} */
+
+#card-container{
+    margin-top: 30px;
+    background-color: rgb(0, 0, 0, 0.4);
+    height: 400px;
+    position: relative;
+    margin-bottom: 200px;
+    
+}
+
+#card-box{
+    display: flex;
+    gap: 10px;
+    height: 200px;
+    padding-right: 20px;
+    /* width: 270px; */
+}
+#card-box div{
+    height: 230px;
+    width: 200px;
+    border-radius: 40%;
+    background-color: rgb(20, 19, 19);
+}
+#card-box div:first-child{
+    margin-top: 200px;
+    background-image: url(/public/images/womens-shoes4.jpg);
+    /* ./images/womens-shoes4.jpg */
+    background-position: center;
+    background-size: cover;
+}
+#card-box div:nth-child(2){
+    margin-top: 100px;
+    background-image: url(/public/images/mens-tshirtc1.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+#card-box div:last-child{
+    background-image: url(/public/images/womens-topc4.jpeg);
+    background-position: center;
+    background-size: cover;
+    
+}
+#card-container button{
+    background-color: rgb(0, 0, 0, 0.1);
+    width: 140px;
+    height: 60px;
+    border: 1px solid rgb(232, 218, 218) ;
+    border-radius: 10px;
+
+    box-shadow: 2px 2px 2px rgb(95, 93, 93);
+    position: absolute;
+    top: 200px;
+    left: 50px;
+}
+#card-container button:hover{
+    background-color: white;
+}
+
+article{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex: wrap;
+    padding: 50px;
+}
+.article-title{
+    font-weight:bold;
+    margin-bottom: 10px;
+    /* margin-left: 70px;
+    margin-right: 30px; */
+    font-family: arial;
+    
+}
+.article-title span{
+    color: palevioletred;
+}
+.article-title2{
+    /* margin-left: 100px; */
+    color: gray;
+}
+hr{
+    margin-top: -30px;
+    font-size: 30px;
+    width: 100%;
+    color: gray;
+}
+
+.Img1{
+    height: 300px;
+    width:  300px;
+    padding: 20px;
+    /* border: 2px solid rgb(235, 230, 230); */
+    border-radius: 10px;
+    
+}
+.kidsImg{
+    height: 200px;
+    width:  200px;
+    padding: 20px;
+    /* border: 2px solid rgb(235, 230, 230);
+    border-radius: 10px; */
+    
+}
+
+.fashion{
+    overflow: hidden;
+    text-align: center;                       
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    margin-top: 50px;
+}
+.kidsFashion{
+    overflow: hidden;
+    text-align: center;                       
+    width: 200px;
+    height: 200px;
+    margin: -15px;
+    /* margin-top: 100px;
+    margin-bottom: 80px; */
+    
+}
+#paragraph1,#paragraph2{
+    color: hsl(0, 0%, 54%);
+    
+    font-style: italic;
+    font-family:cursive;
+    font-weight: bold;
+}
+
+/* #kidsContainer{
+    margin-top: 100px;
+    margin-bottom: 80px;
+} */
+.pics{
+    display: flex;
+}
+.fashion:hover .Img1{
+    transform: translateX(-300px);
+    transition: 10ms;
+    /* box-shadow: 2px 2px 3px solid rgb(18, 17, 17); */
+}
+.kidsFashion:hover .kidsImg{
+    transform: translateX(-200px);
+    transition: 10ms;
+    /* box-shadow: 2px 2px 3px solid rgb(18, 17, 17); */
+}
+.fashion .Img1{
+    transition: 10ms;
+}
+.kidsFashion .Img1{
+    transition: 10ms;
+}
+#productBox1,#productBox2,#kids-container{
+    /* height: 500px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img2{
+    height: 350px;
+    width: 350px;
+    margin: 20px;
+}
+#img5{
+    height: 350px;
+    width: 350px;
+    /* margin: 20px; */
+}
+#img3,.img4{
+    height: 350px;
+    width: 580px;
+    
+}
+.img4{
+    height: 350px;
+    width: 580px;
+    margin: 20px;   
+}
+#sample2{
+    margin-top: -40PX;
+}
+
+#btn{
+   
+    background-color: rgb(0, 0, 0, 0.1);
+    width: 140px;
+    height: 60px;
+    border: 1px solid rgb(232, 218, 218) ;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgb(95, 93, 93);
+    position: absolute;
+    top: 250px;
+    left: 50px;
+}
+#btn:hover{
+    background-color: white;
+}
+
+
+
+footer{
+    padding-top: 100px;
+    margin-top: 100px;
+    background-color: rgb(35, 32, 32);
+    /* height: 400px; */
+}
+
+#footer-title span{
+    color: rgb(192, 175, 175);
+    margin-bottom: 15px;
+}
+footer hr{
+    color: #827d7d;
+    size: 5px;
+    margin-top: 5px;
+    
+}
+@media screen and (max-width:1024px) {
+    #card-box div{
+        height: 200px;
+        /* width: 200px; */
+    }
+}
+@media screen and (min-width: 400px) and (max-width: 1023){
+    
+} 
+
+@media screen and(max-width:399px) {
+    #card-box div{
+       width: 200px;
+    }  
+}
+    
+
+

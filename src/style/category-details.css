@@ -1,0 +1,121 @@
+ 
+       nav{
+        background-color: black;
+        box-shadow: 2px 2px 4px rgb(142, 137, 137);
+    }
+    .navbar-nav{
+        margin-top: 25px;
+    }
+    .navbar-nav li>a{
+        color: white;
+        margin-left: 20px;
+        text-decoration: none;
+    }
+    #signinContainer{
+        padding-left: -50px;
+        /* overflow: auto;
+        text-overflow:; */
+        
+    }
+    #signinContainer li{
+        margin-left: -5px;
+        padding-left: 0px;
+        
+        
+    }
+    #signinContainer li>a{
+        color: black;
+    }
+    .navbar-nav li{
+        margin-left: 15px;
+        margin-bottom: 30px;
+    }
+    .navbar-nav li>a:hover{
+        border-bottom: 2px solid cadetblue;
+    }
+    #btnSignin{
+        margin-top: -30px;
+        color: white;
+        border-radius: 20px; 
+       
+    }
+    #btnCart{
+        margin-top: -30px;
+    }
+    #btnSignin:hover{
+        border-bottom: 4px  solid cadetblue;
+        border-top: 4px solid cadetblue;
+        color: white;
+    }
+    .navbar-brand{
+        font-weight: bold;
+        font-size: 30px;
+        margin-right: 250px;
+        color: white;
+    }
+    .navbar-toggler{
+        background-color: black;
+    }
+
+
+
+#imgContainer img{
+    margin-top: 10px;
+}
+#imgContainer img:hover{
+    cursor: pointer;
+    border: 2px solid rgb(27, 26, 26);
+    border-radius: 10px;
+}
+img{
+    border-radius: 10px;
+}
+main img{
+    border: 2px solid rgb(184, 181, 181);
+}
+
+#title{
+    list-style: none;
+    margin-left: -150px;
+    margin-top: 100px;
+    font-size: 30px;
+}
+li{
+    margin-bottom: 15px;
+    
+}
+section{
+    background-color: rgb(183, 180, 180);
+    padding: 50px;
+}
+
+footer{
+    padding-top: 100px;
+    margin-top: 100px;
+    background-color: rgb(35, 32, 32);
+    /* height: 400px; */
+}
+
+#footer-title span{
+    color: rgb(192, 175, 175);
+    margin-bottom: 15px;
+}
+footer hr{
+    color: #827d7d;
+    size: 5px;
+    margin-top: 5px;
+    
+}
+
+@media screen and (min-width: 100px) and (max-width: 1000px){
+    
+    section{
+        display: flex;
+         flex-direction: column;
+    } 
+    #title{ 
+        width: 350px; 
+         justify-content: around;
+        margin-left: 100px;
+    }
+}
