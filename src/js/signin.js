@@ -7,7 +7,7 @@ document.querySelector("form").addEventListener("submit",FormSubmit);
 function ContinueClick(){
     event.preventDefault();
     document.querySelector("form").style.width = "500px";
-    fetch("http://127.0.0.1:4400/users")
+    fetch("https://shopper-backend-fdhf.onrender.com/users")
     .then(response=>{
         return response.json()
     })
@@ -33,7 +33,7 @@ function ContinueClick(){
 
 function FormSubmit(){
     event.preventDefault();
-    fetch("http://127.0.0.1:4400/users")
+    fetch("https://shopper-backend-fdhf.onrender.com/users")
     .then(response=>{
         return response.json()
     })

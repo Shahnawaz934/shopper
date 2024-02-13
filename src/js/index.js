@@ -44,7 +44,7 @@ function KidsClick(){
 
 
 function LoadMensCategories(){
-    fetch("http://127.0.0.1:4400/productsSample")
+    fetch("https://shopper-backend-fdhf.onrender.com//productsSample")
     .then(response=>{
         return response.json()
     })
@@ -90,7 +90,7 @@ function LoadMensCategories(){
 
 
 function LoadWomensCategories(){
-    fetch("http://127.0.0.1:4400/productsSample")
+    fetch("https://shopper-backend-fdhf.onrender.com//productsSample")
     .then(response=>{
         return response.json()
     })
@@ -227,8 +227,8 @@ function LoadCategories(url){
 
 
 
-LoadCategories("http://127.0.0.1:4400/products/mens");
+LoadCategories("https://shopper-backend-fdhf.onrender.com/products/mens");
 
-LoadCategories("http://127.0.0.1:4400/products/womens");
-LoadCategories("http://127.0.0.1:4400/products/kids");
+LoadCategories("https://shopper-backend-fdhf.onrender.com/products/womens");
+LoadCategories("https://shopper-backend-fdhf.onrender.com/products/kids");
 

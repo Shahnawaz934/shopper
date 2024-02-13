@@ -13,7 +13,7 @@ function FormSubmit(){
         Password : document.getElementById("txtPassword").value
     }
    fetch(
-          "http://127.0.0.1:4400/registeruser",
+          "https://shopper-backend-fdhf.onrender.com/registeruser",
         { method: "POST",
          body: JSON.stringify(data),
          headers:{

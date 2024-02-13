@@ -87,20 +87,20 @@ ul{
 }
 #card-box div:first-child{
     margin-top: 200px;
-    background-image: url(/shopper/public/images/womens-shoes4.jpg);
+    background-image: url(/public/images/womens-shoes4.jpg);
     /* ./images/womens-shoes4.jpg */
     background-position: center;
     background-size: cover;
 }
 #card-box div:nth-child(2){
     margin-top: 100px;
-    background-image: url(/shopper/public/images/mens-tshirtc1.jpg);
+    background-image: url(/public/images/mens-tshirtc1.jpg);
     background-position: center;
     background-size: cover;
     
 }
 #card-box div:last-child{
-    background-image: url(/shopper/public/images/womens-topc4.jpeg);
+    background-image: url(/public/images/womens-topc4.jpeg);
     background-position: center;
     background-size: cover;
     

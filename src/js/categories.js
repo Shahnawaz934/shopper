@@ -41,12 +41,12 @@ function KidsClick(){
 //     CategoryClick("http://127.0.0.1:4400/products");
 // }
 
-if(categoryName!="http:127.0.0.1:4400/products"){
-    CategoryClick(`http://127.0.0.1:4400/products/${categoryName}`);
+if(categoryName!="https://shopper-backend-fdhf.onrender.com/products"){
+    CategoryClick(`https://shopper-backend-fdhf.onrender.com/products/${categoryName}`);
 }
 function bodyload(){
     categoryName = JSON.parse(localStorage.getItem("category"));
-    if(categoryName=="http://127.0.0.1:4400/products"){
+    if(categoryName=="https://shopper-backend-fdhf.onrender.com/products"){
         CategoryClick(categoryName)
     }
     //else{
@@ -70,7 +70,7 @@ function CategorySort(products){
 
 function CategoryClick(url){
     //document.querySelector("main").innerHTML = ""
-    if(url.startsWith("http://127.0.0.1:4400")){
+    if(url.startsWith("https://shopper-backend-fdhf.onrender.com/")){
         fetch(url)
         .then(response=>{
             return response.json()
@@ -199,7 +199,7 @@ function GetCartCount(){
 
 
 function LoadCategories(){
-    fetch("http://127.0.0.1:4400/products/categories")
+    fetch("https://shopper-backend-fdhf.onrender.com/products/categories")
     .then(response=>{
         return response.json()
     })
@@ -223,13 +223,13 @@ function handleCategoryChange(){
     //console.log(categoryName);
     if(categoryName=="all"){
         
-         localStorage.setItem("category",JSON.stringify("http://127.0.0.1:4400/products"))
-         CategoryClick("http://127.0.0.1:4400/products")
+         localStorage.setItem("category",JSON.stringify("https://shopper-backend-fdhf.onrender.com/products"))
+         CategoryClick("https://shopper-backend-fdhf.onrender.com/products")
     }
     else{
         localStorage.setItem("category",JSON.stringify(categoryName));
         var category = JSON.parse(localStorage.getItem("category"));
-        CategoryClick(`http://127.0.0.1:4400/products/${category}`)
+        CategoryClick(`https://shopper-backend-fdhf.onrender.com/products/${category}`)
     }
 }
 
@@ -241,7 +241,7 @@ function handleFilterByCategoryClick(){
             console.log(item.value);
             localStorage.setItem("category",JSON.stringify(item.value));
             var category = JSON.parse(localStorage.getItem("category"));
-            CategoryClick(`http://127.0.0.1:4400/products/${category}`);
+            CategoryClick(`https://shopper-backend-fdhf.onrender.com/products/${category}`);
         }
     }
 }
@@ -249,8 +249,8 @@ function handleFilterByCategoryClick(){
 function handlePriceChange(){
     categoryName = JSON.parse(localStorage.getItem("category"));
     
-    if(categoryName =="http://127.0.0.1:4400/products"){
-        fetch("http://127.0.0.1:4400/products")
+    if(categoryName =="https://shopper-backend-fdhf.onrender.com/products"){
+        fetch("https://shopper-backend-fdhf.onrender.com/products")
         .then(response=>{
             return response.json();
         })
@@ -260,7 +260,7 @@ function handlePriceChange(){
         })
     }
     else{
-        fetch(`http://127.0.0.1:4400/products/${categoryName}`)
+        fetch(`https://shopper-backend-fdhf.onrender.com/products/${categoryName}`)
         .then(response=>{
             return response.json();
         })
